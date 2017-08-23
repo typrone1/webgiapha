@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @media (max-width: 576px) {
+            nav .container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <a class="navbar-brand" href="#">Gia Phả</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Thêm thành viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Login</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-3">
+                <img src="image/avatar.png" class="img-thumbnail">
+            </div>
+            <div class="col-9">
+                <div class="form-group row">
+                    <label for="ho-so-bo-me" class="col-2 col-form-label">Hồ sơ bố mẹ</label>
+                    <div class="col-10">
+                        <input class="form-control" type="text" id="ho-so-bo-me">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="ho-ten" class="col-2 col-form-label">Họ và tên</label>
+                    <div class="col-10">
+                        <input class="form-control" type="text" value="Artisanal kale" id="ho-ten">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="ngay-sinh" class="col-2 col-form-label">Ngày sinh</label>
+                    <div class="col-10">
+                        <input class="form-control" type="date" value="2011-08-19" id="ngay-sinh">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="gioi-tinh" class="col-2 col-form-label">Giới tính</label>
+                    <div class="col-10">
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="gioi-tinh" id="gioi-tinh" value="nam" checked> Nam
+                    </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="gioi-tinh" id="gioi-tinh" value="nu"> Nữ
+                    </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="noi-sinh" class="col-2 col-form-label">Nơi sinh</label>
+                    <div class="col-10">
+                        <input class="form-control" type="text" id="noi-sinh">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="dia-chi" class="col-2 col-form-label">Địa chỉ</label>
+                    <div class="col-10">
+                        <input class="form-control" type="text" id="dia-chi">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="ngay-mat" class="col-2 col-form-label">Ngày mất</label>
+                    <div class="col-10">
+                        <input class="form-control" type="date" id="ngay-mat">
+                    </div>
+                </div>
+                <input class="btn btn-block btn-primary" type="submit" value="Khởi tạo">
+            </div>
+        </div>
+
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="tether/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
