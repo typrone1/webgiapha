@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <div class="col-3">
-                <img src="image/avatar.png" class="img-thumbnail">
+                <img src="{{asset('image/avatar.png')}}" class="img-thumbnail">
             </div>
             <div class="col-9">
                 <form action="{{ route('tao-ho-so') }}" class="form-group" method="post">
@@ -16,19 +16,19 @@
                     <div class="form-group row">
                         <label for="ho-so-bo-me" class="col-2 col-form-label">Hồ sơ bố mẹ</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" name="ho_so_bo_me" id="ho-so-bo-me">
+                            <input class="form-control" type="text" name="ho_so_bo_me" value="{{isset($hoSoBoMe)?$hoSoBoMe:''}}" id="ho-so-bo-me">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="ho-ten" class="col-2 col-form-label">Họ và tên</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" name="ho_ten" value="Artisanal kale" id="ho-ten">
+                            <input class="form-control" type="text" name="ho_ten" value="" id="ho-ten" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="ngay-sinh" class="col-2 col-form-label">Ngày sinh</label>
                         <div class="col-10">
-                            <input class="form-control" type="date" name="ngay_sinh" value="2011-08-19" id="ngay-sinh">
+                            <input class="form-control" type="date" name="ngay_sinh" value="2011-08-19" id="ngay-sinh" required>
                         </div>
                     </div>
 
@@ -52,13 +52,13 @@
                     <div class="form-group row">
                         <label for="noi-sinh" class="col-2 col-form-label">Nơi sinh</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" name="noi_sinh" id="noi-sinh">
+                            <input class="form-control" type="text" name="noi_sinh" id="noi-sinh" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="dia-chi" class="col-2 col-form-label">Địa chỉ</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" name="dia_chi" id="dia-chi">
+                            <input class="form-control" type="text" name="dia_chi" id="dia-chi" required>
                         </div>
                     </div>
                     <div class="form-group row">

@@ -24,7 +24,7 @@ Route::post('tao-ho-so', ['as' => 'tao-ho-so',
 Route::get('chi-tiet-ho-so/{id}', ['as' => 'chi-tiet-ho-so',
     'uses' => 'HoSoController@getChiTietHoSo']);
 
-Route::get('chi-tiet-ho-so/{id}/them-con', ['as' => 'them-con',
+Route::get('chi-tiet-ho-so/{hoSoBoMe}/them-con', ['as' => 'them-con',
     'uses' => 'HoSoController@getThemHoSoCon']);
 
 Route::get('so-do-gia-pha','HoSoController@getGiaPha')->name('so-do-gia-pha');
@@ -34,5 +34,5 @@ Route::get('ket-qua-xung-ho','HoSoController@getKQXungHo')->name('ket-qua-xung-h
 Route::get('lich', function (){
     return view('page.lich-gia-pha');
 })->name('lich');
-
+Route::post('cap-nhat-ho-so/{id}', 'HoSoController@capNhatHoSo')->name('cap-nhat-ho-so');
 

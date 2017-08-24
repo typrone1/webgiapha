@@ -72,7 +72,7 @@
 
             </div>
             <div class="col-3">
-                <a class="btn btn-outline-danger" href="#"><i class="fa fa-plus mr-2"></i>Thêm con</a>
+                <a class="btn btn-outline-danger" href="{{ route('them-con', $hoSo->id) }}"><i class="fa fa-plus mr-2"></i>Thêm con</a>
             </div>
         </div>
     </div>

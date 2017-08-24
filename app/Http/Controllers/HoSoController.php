@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\HoSo;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Model;
 
 class HoSoController extends Controller
 {
@@ -96,5 +96,20 @@ class HoSoController extends Controller
             return "A và B là Anh Em";
         }
         return "Tôi không biết !";
+    }
+
+
+    protected function getThemHoSoCon($hoSoBoMe)
+    {
+        return view('page.dang-ky', compact('hoSoBoMe'));
+    }
+
+
+    public function capNhatHoSo(Request $request, $id){
+        $hoSo = HoSo::find($id);
+        $hoSo->ho_ten = $request->ho_ten;
+        $hoSo->save();
+        $data = HoSo::select('id', 'ho_ten', 'ma_ho_so_bo_me')->get()->toArray();
+        return redirect()->back()->with('data',$data);
     }
 }

@@ -15,9 +15,8 @@
             }
         }
         .tree {
-            min-width: 2000px;
-            max-height: 500px;
-            margin: 0 50px;
+            min-width: 2500px;
+            min-height: 100vh;
         }
 
         .tree ul {
@@ -103,9 +102,10 @@ right connector from last child*/
             height: 20px;
         }
 
-        .tree li a {
+        .tree li .box-item {
             border: 1px solid #ccc;
             padding: 5px 10px;
+            height: 50px;
             text-decoration: none;
             color: #666;
             font-family: arial, verdana, tahoma;
@@ -123,18 +123,18 @@ right connector from last child*/
         /*Time for some hover effects*/
         /*We will apply the hover effect the the lineage of the element also*/
 
-        .tree li a:hover,
-        .tree li a:hover+ul li a {
+        .tree li .box-item:hover,
+        .tree li .box-item:hover+ul li .box-item {
             background: #c8e4f8;
             color: #000;
             border: 1px solid #94a0b4;
         }
         /*Connector styles on hover*/
 
-        .tree li a:hover+ul li::after,
-        .tree li a:hover+ul li::before,
-        .tree li a:hover+ul::before,
-        .tree li a:hover+ul ul::before {
+        .tree li .box-item:hover+ul li::after,
+        .tree li .box-item:hover+ul li::before,
+        .tree li .box-item:hover+ul::before,
+        .tree li .box-item:hover+ul ul::before {
             border-color: #94a0b4;
         }
 
@@ -160,6 +160,18 @@ right connector from last child*/
         th:nth-of-type(1), td:nth-of-type(1) {
             color: red;
         }
+        .box-item a:hover {
+            text-decoration: none;
+        }
+
+        .nut-nho {
+            line-height:10px;
+            font-size: 10px;
+            width: 20px;
+            margin: 0 4px;
+            padding: 5px;
+        }
+
     </style>
 </head>
 
