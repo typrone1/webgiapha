@@ -11,7 +11,6 @@ class HoSoController extends Controller
     public function postHoSo(Request $request)
     {
         $hoSo = new HoSo();
-//        print_r($request->all());
         $hoSo->id_ho_toc = 1;
         $hoSo->ho_ten = $request->ho_ten;
         $hoSo->ma_ho_so_bo_me = $request->ho_so_bo_me;
@@ -30,10 +29,11 @@ class HoSoController extends Controller
         return view('page.chi-tiet-ho-so', compact('hoSo'));
     }
 
-    public static function getGiaPha()
+    public static function getGiaPha(Request $request)
     {
+        $maHoSoBoMe = $request->id;
         $data = HoSo::select('id', 'ho_ten', 'ma_ho_so_bo_me')->get()->toArray();
-        return view('page.so-do-gia-pha', compact('data'));
+        return view('page.so-do-gia-pha', compact('data','maHoSoBoMe'));
     }
 
     public function getXungHo()

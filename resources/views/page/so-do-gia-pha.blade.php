@@ -2,7 +2,7 @@
 @section('content')
     <div class="container-fluid" style="overflow: auto">
         <div class="tree">
-            {{inGiaPha($data)}}
+            {{inGiaPha($data,$maHoSoBoMe)}}
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="tieude" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">

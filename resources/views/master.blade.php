@@ -7,9 +7,20 @@
     $('.box-item a:first-child').click(function(){
         $(this).parent().parent().find('ul').toggle()
     });
+    $( "li:has(ul)").each(function () {
+        $(this).find('div').css('background-color','cyan');
+        var str = $(this).find('a').first().html();
 
-    $( "li" ).has( "ul" ).css( "background-color", "red" );
+        var patt1 = /(?:\d*)/g;
+        var result = str.match(patt1);
+        console.log(result[0]);
+        $(this).find('div:first').append('<a href="{{route('so-do-gia-pha')}}/'+result[0]+'" class="btn btn-outline-primary nut-nho">' +
+            '<i class="fa fa-pagelines"></i></a>')
+    });
 
+    $( "li:not(li:has(ul))").each(function () {
+        $(this).find('div').css('background-color','white');
+    });
 
 
     $('#exampleModal').on('show.bs.modal', function (event) {

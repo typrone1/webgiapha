@@ -36,3 +36,5 @@ Route::get('lich', function (){
 })->name('lich');
 Route::post('cap-nhat-ho-so/{id}', 'HoSoController@capNhatHoSo')->name('cap-nhat-ho-so');
 
+Route::get('so-do-gia-pha/{id}', 'HoSoController@getGiaPha')->name('so-do-gia-pha-2');
+
